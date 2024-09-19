@@ -9,18 +9,6 @@
 #define GREY "\033[90m"
 #define RED "\033[31m"
 using namespace std;
-/*
-game doesnt tell you what the word is when you finsish fixed
-//Change so we dont print as soon as we process the letter fixed
-and the letter loops are buggy 
-Changes and improvemnts that can be made: 
-
-Uncapping player amounts Check to 5
-Adding names to the players Check 
-Adding dificulty teirs (Creating different word lists with easy medium hard) allowing player to chose which one they would want Still working on
-fixing the find function when the user enters a duplicate letter.tbd
-
-*/
 
 // Group Activity #6 Contributors: Daiwei, Alberto, Kenzai, Mikel, Andrew
 
@@ -97,7 +85,7 @@ void startNewGame(const vector<string>& wordList, int playerCount, vector<int>& 
             // Creates Player Turns 
             cout << playerList.at(i) << "'s " << "Turn" << endl;
             randomIndex = rand() % wordList.size();
-            cout << wordList.at(randomIndex) << endl; //This will show the word (Used for testing)
+            //cout << wordList.at(randomIndex) << endl; //This will show the word (Used for testing)
             cout << "Guess the word: ";
             numberGuess = 5;
         
