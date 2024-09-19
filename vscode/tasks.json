@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build Wordle",
+            "type": "shell",
+            "command": "/usr/bin/g++",  // Change to /usr/bin/clang++ if you're using Clang
+            "args": [
+                "-std=c++11",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task for building C++ code"
+        }
+    ]
+}
