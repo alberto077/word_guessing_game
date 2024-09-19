@@ -148,7 +148,9 @@ void startNewGame(const vector<string>& wordList, int playerCount, vector<int>& 
     
                 } while (wordGuess != wordList.at(randomIndex) && numberGuess != 0);
             
-
+                if (wordGuess != wordList.at(randomIndex) && numberGuess == 0) {
+                cout << RED << "You have run out of tries! Your word was: " << GREEN << wordList.at(randomIndex) << RESET << endl;
+            }
         // Resets the wordGuess to nothing
          wordGuess.clear();
          
