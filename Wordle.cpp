@@ -136,21 +136,21 @@ void startNewGame(const vector<string>& wordList, int playerCount, vector<int>& 
                     //Alberto + Daiwei
                     playerHighScores.at(i) += numberGuess;
                 }
-        
-                else if (wordGuess != wordList.at(randomIndex)){
+                else if (wordGuess != wordList.at(randomIndex)) {
                     numberGuess--; // Decreases number of guesses possible
-                    cout << "Try again: "; 
-                }
-                else if (numberGuess == 0){
-                    cout << RED << "You have ran out of tries your word was: " << GREEN << wordList.at(randomIndex) << RESET << endl;
-
+                    if (numberGuess > 0) {
+                        cout << "Try again: ";
+                    }
+                    else {
+                    // If no guesses are left, show the correct word
+                    cout << RED << "You have run out of tries! Your word was: " << GREEN << wordList.at(randomIndex) << RESET << endl;
+                    }
                 }
     
                 } while (wordGuess != wordList.at(randomIndex) && numberGuess != 0);
             
-                if (wordGuess != wordList.at(randomIndex) && numberGuess == 0) {
-                cout << RED << "You have run out of tries! Your word was: " << GREEN << wordList.at(randomIndex) << RESET << endl;
-            }
+            
+            
         // Resets the wordGuess to nothing
          wordGuess.clear();
          
